@@ -27,5 +27,7 @@
 			get { return eleitores; }
 			set { eleitores = value; }
 		}
-	}
+
+        public object ID_ELEIÇÃO { get; set; }
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using Models;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DAL
 {
@@ -13,9 +14,10 @@ namespace DAL
 
             try
             {
-                cmd.CommandText = "INSERT INTO Eleitor(Titulo, Nome) VALUES(@Titulo, @Nome)";
+                cmd.CommandText = "INSERT INTO Eleitor(Titulo, Nome, Votou) VALUES(@Titulo, @Nome, @Votou)";
                 cmd.Parameters.AddWithValue("@Titulo", _eleitor.Titulo);
                 cmd.Parameters.AddWithValue("@Nome", _eleitor.Nome);
+                cmd.Parameters.AddWithValue("@Votou", _eleitor.Votou);
                 cmd.CommandType = CommandType.Text;
 
                 cn.Open();
@@ -45,11 +47,31 @@ namespace DAL
         }
         public void Alterar(Eleitor _eleitor)
         {
-           
+
         }
-        public List<Eleitor> Buscar(string _titulo)
+        public DataTable BuscarPorTutulo(string _titulo)
         {
-            throw new NotImplementedException();
+
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo = @Titulo";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@Titulo", _titulo);
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+
         }
     }
 }
+    
