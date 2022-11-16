@@ -4,6 +4,8 @@ namespace UITerminalWindows
 {
     public partial class FormCadastroCandidato : Form
     {
+        private object bindingSourceCandidato;
+
         public FormCadastroCandidato()
         {
             InitializeComponent();
@@ -14,12 +16,26 @@ namespace UITerminalWindows
             bindingSourceCandidato.EndEdit();
             CandidatoBLL candidatoBll = new CandidatoBll();
 
-            candidatoBll.inserir((Candidato)bindingSourceCandidato.Current);
+            candidatoBll.inserir(current: (Candidato)bindingSourceCandidato.Current);
 
             MessageBox.Show("Candidato salvo");
             Close();
         }
 
+
+        private void CadastroCandidato_Load(object sender, EventArgs e)
+        {
+            Candidato candidato = new Candidato();
+            bindingSourceCandidato.DataSource = candidato;
+            object value = bindingSourceCandidato.AddNew();
+        }
+
+
+        private void buttonCancelar1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -40,16 +56,6 @@ namespace UITerminalWindows
 
         }
 
-        private void CadastroCandidato_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void buttonCancelar1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

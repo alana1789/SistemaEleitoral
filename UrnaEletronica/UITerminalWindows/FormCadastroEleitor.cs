@@ -36,7 +36,6 @@ namespace UITerminalWindows
         private void checkBoxVotou_CheckedChanged(object sender, EventArgs e)
         {
             Close();
-        }
-
+       }
     }
 }

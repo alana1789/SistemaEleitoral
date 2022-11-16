@@ -26,6 +26,11 @@ namespace BLL
             EleicaoDAL _eleicaoDAL = new EleicaoDAL();
             return _eleicaoDAL.Buscar(_turno);
         }
+
+        public void inserir(Eleicao current)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

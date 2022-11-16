@@ -38,10 +38,8 @@
             this.textBoxTitulo = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             checkBoxVotou = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBoxVotou
@@ -131,10 +129,6 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // FormCadastroEleitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -154,7 +148,6 @@
             this.Text = "  ";
             this.Load += new System.EventHandler(this.FormCadastroEleitor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +163,5 @@
         private Button buttonSalvar;
         private Button buttonCancelar;
         private BindingSource bindingSourceEleitor;
-        private ErrorProvider errorProvider1;
     }
 }
