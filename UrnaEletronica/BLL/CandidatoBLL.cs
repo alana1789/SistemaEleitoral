@@ -25,6 +25,11 @@ namespace BLL
             CandidatoDAL candidatoDAL = new CandidatoDAL();
             return candidatoDAL.Buscar(_numero);
         }
+
+        public void inserir(Candidato current)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
