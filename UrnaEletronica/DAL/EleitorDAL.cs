@@ -66,7 +66,7 @@ namespace DAL
         }
         }
 
-        private static DataTable BuscarPorTutulo(string _titulo)
+        public  DataTable BuscarPorTutulo(string _titulo)
         {
 
 

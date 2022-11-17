@@ -28,14 +28,6 @@ namespace UITerminalWindows
             bindingSourceEleitor.AddNew();
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
-        private void checkBoxVotou_CheckedChanged(object sender, EventArgs e)
-        {
-            Close();
-       }
     }
 }

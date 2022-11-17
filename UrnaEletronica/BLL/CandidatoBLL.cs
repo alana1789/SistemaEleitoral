@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Models;
+using System.Data;
 
 namespace BLL
 {
@@ -20,7 +21,7 @@ namespace BLL
             CandidatoDAL _candidatoDAL = new CandidatoDAL();
             _candidatoDAL.Alterar(_candidato);
         }
-        public List<Candidato> Buscar(string _numero)
+        public DataTable Buscar(string _numero)
         {
             CandidatoDAL candidatoDAL = new CandidatoDAL();
             return candidatoDAL.Buscar(_numero);

@@ -4,8 +4,6 @@ namespace UITerminalWindows
 {
     public partial class FormCadastroCandidato : Form
     {
-        private object bindingSourceCandidato;
-
         public FormCadastroCandidato()
         {
             InitializeComponent();
@@ -50,12 +48,13 @@ namespace UITerminalWindows
         {
 
         }
-
         private void textboxNome_TextChanged(object sender, EventArgs e)
+
         {
 
-        }
 
+        }
     }
+
 
 }

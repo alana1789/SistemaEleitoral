@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.bindingSourceEleicao = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +86,11 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Turno";
             // 
-            // CadastroEleicao
+            // bindingSourceEleicao
+            // 
+            this.bindingSourceEleicao.DataSource = typeof(Models.Eleicao);
+            // 
+            // FormCadastroEleicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,8 +100,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CadastroEleicao";
+            this.Name = "FormCadastroEleicao";
             this.Text = "CadastroEleicao";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +115,6 @@
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox1;
         private Label label3;
+        private BindingSource bindingSourceEleicao;
     }
 }

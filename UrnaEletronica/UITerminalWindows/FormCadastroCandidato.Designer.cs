@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNumero1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCancelar1 = new System.Windows.Forms.Button();
             this.buttonSalvar1 = new System.Windows.Forms.Button();
+            this.bindingSourceCandidato = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,7 +109,7 @@
             this.buttonSalvar1.UseVisualStyleBackColor = true;
             this.buttonSalvar1.Click += new System.EventHandler(this.buttonSalvar1_Click);
             // 
-            // CadastroCandidato
+            // FormCadastroCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +121,9 @@
             this.Controls.Add(this.textboxNome1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CadastroCandidato";
+            this.Name = "FormCadastroCandidato";
             this.Load += new System.EventHandler(this.CadastroCandidato_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +138,6 @@
         private Label label2;
         private Button buttonCancelar1;
         private Button buttonSalvar1;
+        private BindingSource bindingSourceCandidato;
     }
 }

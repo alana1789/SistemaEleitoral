@@ -49,14 +49,25 @@ namespace DAL
         }
         public void Alterar(Candidato _candidato)
         {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            SqlCommand cmd = cn.CreateCommand();
+            try
+            {
+                cmd.CommandText = "UPDATE Eleitor SET Nome = @Nome, Titulo = @Titulo, Votou = @Votou WHERE Id = @Id";
+                cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
+                cmd.Parameters.AddWithValue("@Nome", _candidato.Nome);
+                cmd.Parameters.AddWithValue("@Id", _candidato.Id);
 
-        }
-        public List<Candidato> Buscar(int _numero)
-        {
-            return new List<Candidato>();
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+            }
         }
 
-        public List<Candidato> Buscar(string _numero)
+        public DataTable Buscar(string _numero)
         {
             {
 
@@ -72,7 +83,7 @@ namespace DAL
                     cn.Open();
                     da.Fill(dt);
                     return dt;
-                    
+
                 }
                 finally
                 {

@@ -1,5 +1,6 @@
 ﻿using DAL;
 using Models;
+using System.Data;
 
 namespace BLL
 {
@@ -21,10 +22,10 @@ namespace BLL
             EleicaoDAL _eleicaoDAL = new EleicaoDAL();
             _eleicaoDAL.Alterar(_eleicao);
         }
-        public List<Eleicao> Buscar(string _turno)
+        public DataTable Buscar(int _ano, int _turno)
         {
-            EleicaoDAL _eleicaoDAL = new EleicaoDAL();
-            return _eleicaoDAL.Buscar(_turno);
+            EleicaoDAL eleicaoDAL = new EleicaoDAL();
+            return eleicaoDAL.Buscar(_ano, _turno);
         }
 
         public void inserir(Eleicao current)

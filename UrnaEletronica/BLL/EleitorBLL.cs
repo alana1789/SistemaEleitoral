@@ -30,9 +30,10 @@ namespace BLL
             return eleitorDAL.BuscarPorTutulo(_titulo);
         }
 
-        public void inserir(Eleitor current)
+        public void inserir(Eleitor _eleitor)
         {
-            throw new NotImplementedException();
+            EleitorDAL _eleitorDAL = new EleitorDAL();
+            _eleitorDAL.Inseir(_eleitor);
         }
     }
 }

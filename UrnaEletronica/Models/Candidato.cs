@@ -18,8 +18,13 @@
 		}
 
         public object Id { get; set; }
+        public object Nome { get; set; }
 
-		public Candidato(int _numero, string _nome_candidato)
+		public Candidato()
+		{
+
+		}
+        public Candidato(int _numero, string _nome_candidato)
 		{
 			Numero = _numero;
 			Nome_candidato = _nome_candidato;

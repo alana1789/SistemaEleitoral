@@ -36,7 +36,7 @@ namespace DAL
                 try
                 {
                     cmd.CommandText = "DELETE FROM Eleicao WHERE ID_ELEIÇÃO = @ID_ELEIÇÃO";
-                    cmd.Parameters.AddWithValue("@ID_ELEIÇÃO", _eleicao.ID_ELEIÇÃO);
+                    cmd.Parameters.AddWithValue("@ID_ELEIÇÃO", _eleicao.Id_Eleicao);
                     cmd.CommandType = CommandType.Text;
                     cn.Open();
                     cmd.ExecuteNonQuery();
@@ -50,9 +50,26 @@ namespace DAL
         }
         public void Alterar(Eleicao _eleicao)
         {
-     
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            SqlCommand cmd = cn.CreateCommand();
+            try
+            {
+                cmd.CommandText = "UPDATE Eleicao SET Ano = @Ano, Turno = @Turno WHERE Id = @Id";
+                cmd.Parameters.AddWithValue("@Ano", _eleicao.Ano);
+                cmd.Parameters.AddWithValue("@Turno", _eleicao.Turno);
+                cmd.Parameters.AddWithValue("@Id", _eleicao.Id_Eleicao);
+
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
-        public List<Eleicao> Buscar(int _ano, int _turno)
+
+        public DataTable Buscar(int _ano, int _turno)
         {
             {
 
@@ -75,11 +92,6 @@ namespace DAL
                     cn.Close();
                 }
             }
-        }
-
-        public List<Eleicao> Buscar(string titulo)
-        {
-            throw new NotImplementedException();
         }
     }
 }

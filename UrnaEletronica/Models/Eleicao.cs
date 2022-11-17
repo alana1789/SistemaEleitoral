@@ -6,6 +6,7 @@
 		private int turno;
 		private List<Candidato> candidatos;
 		private List<Eleitor> eleitores;
+		private int id_eleicao;
 		
 		public int Ano
 		{
@@ -28,6 +29,12 @@
 			set { eleitores = value; }
 		}
 
-        public object ID_ELEIÇÃO { get; set; }
-    }
+
+		public int Id_Eleicao
+		{
+			get { return id_eleicao; }
+			set { id_eleicao = value; }
+		}
+
+	}
 }
