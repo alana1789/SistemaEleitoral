@@ -23,9 +23,11 @@ namespace UITerminalWindows
 
         private void CadastroCandidato_Load(object sender, EventArgs e)
         {
+
             Candidato candidato = new Candidato();
             bindingSourceCandidato.DataSource = candidato;
             bindingSourceCandidato.AddNew();
+
         }
 
 
@@ -33,7 +35,6 @@ namespace UITerminalWindows
         {
             Close();
         }
-        
 
     }
 

@@ -63,7 +63,7 @@ namespace DAL
             }
             finally
             {
-        }
+            }
         }
 
         public  DataTable BuscarPorTitulo(string _titulo)
@@ -76,9 +76,9 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo = @Titulo";
+                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo WHERE titulo LIKE @Titulo";
                 da.SelectCommand.CommandType = CommandType.Text;
-                da.SelectCommand.Parameters.AddWithValue("@Titulo", _titulo);
+                da.SelectCommand.Parameters.AddWithValue("@Titulo","%" + _titulo + "%");
                 cn.Open();
                 da.Fill(dt);
                 return dt;

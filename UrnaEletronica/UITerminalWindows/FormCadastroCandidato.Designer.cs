@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.textBoxNumero1 = new System.Windows.Forms.TextBox();
             this.bindingSourceCandidato = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -40,17 +40,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitulo
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(899, 50);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de candidato";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.UseMnemonic = false;
+            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(899, 50);
+            this.labelTitulo.TabIndex = 1;
+            this.labelTitulo.Text = "Cadastro de candidato";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelTitulo.UseMnemonic = false;
             // 
             // textBoxNumero1
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textboxNome1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitulo);
             this.Name = "FormCadastroCandidato";
             this.Load += new System.EventHandler(this.CadastroCandidato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).EndInit();
@@ -134,7 +134,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label labelTitulo;
         private TextBox textBoxNumero1;
         private Label label3;
         private TextBox textboxNome1;
