@@ -16,7 +16,7 @@ namespace DAL
                 {
                     cmd.CommandText = "INSERT INTO Candidato(Numero, Nome_candidato) VALUES(@Numero, @Nome_candidato)";
                     cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
-                    cmd.Parameters.AddWithValue("@Nome", _candidato.Nome_candidato);
+                    cmd.Parameters.AddWithValue("@Nome_candidato", _candidato.Nome_candidato);
                     cmd.CommandType = CommandType.Text;
 
                     cn.Open();
@@ -53,9 +53,9 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "UPDATE Eleitor SET Nome = @Nome, Titulo = @Titulo, Votou = @Votou WHERE Id = @Id";
+                cmd.CommandText = "UPDATE Eleitor SET Nome_candidato = @Nome_candidato, Titulo = @Titulo";
                 cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
-                cmd.Parameters.AddWithValue("@Nome", _candidato.Nome);
+                cmd.Parameters.AddWithValue("@Nome_candidato", _candidato.Nome);
                 cmd.Parameters.AddWithValue("@Id", _candidato.Id);
 
                 cmd.CommandType = CommandType.Text;

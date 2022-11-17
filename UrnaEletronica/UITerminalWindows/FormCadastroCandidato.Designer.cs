@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNumero1 = new System.Windows.Forms.TextBox();
+            this.bindingSourceCandidato = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.textboxNome1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCancelar1 = new System.Windows.Forms.Button();
             this.buttonSalvar1 = new System.Windows.Forms.Button();
-            this.bindingSourceCandidato = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,44 +50,47 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastro de candidato";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.UseMnemonic = false;
             // 
             // textBoxNumero1
             // 
-            this.textBoxNumero1.Location = new System.Drawing.Point(334, 199);
+            this.textBoxNumero1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCandidato, "Numero", true));
+            this.textBoxNumero1.Location = new System.Drawing.Point(455, 202);
             this.textBoxNumero1.Name = "textBoxNumero1";
             this.textBoxNumero1.Size = new System.Drawing.Size(271, 27);
             this.textBoxNumero1.TabIndex = 5;
-            this.textBoxNumero1.TextChanged += new System.EventHandler(this.textBoxTitulo_TextChanged);
+            // 
+            // bindingSourceCandidato
+            // 
+            this.bindingSourceCandidato.DataSource = typeof(Models.Candidato);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(334, 171);
+            this.label3.Location = new System.Drawing.Point(455, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Número";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textboxNome1
             // 
-            this.textboxNome1.Location = new System.Drawing.Point(12, 199);
+            this.textboxNome1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceCandidato, "Nome_candidato", true));
+            this.textboxNome1.Location = new System.Drawing.Point(133, 202);
             this.textboxNome1.Name = "textboxNome1";
             this.textboxNome1.Size = new System.Drawing.Size(290, 27);
             this.textboxNome1.TabIndex = 6;
-            this.textboxNome1.TextChanged += new System.EventHandler(this.textboxNome_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 171);
+            this.label2.Location = new System.Drawing.Point(133, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonCancelar1
             // 

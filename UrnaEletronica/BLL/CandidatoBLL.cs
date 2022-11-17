@@ -11,6 +11,7 @@ namespace BLL
             CandidatoDAL candidatoDAL = new CandidatoDAL();
             candidatoDAL.Inseir(_candidato);
         }
+
         public void Excluir(Candidato _candidato)
         {
             CandidatoDAL candidatoDAL = new CandidatoDAL();
@@ -27,9 +28,10 @@ namespace BLL
             return candidatoDAL.Buscar(_numero);
         }
 
-        public void inserir(Candidato current)
+        public void inserir(Candidato _candidato)
         {
-            throw new NotImplementedException();
+            CandidatoDAL _candidatoDAL = new CandidatoDAL();
+            _candidatoDAL.Inseir(_candidato);
         }
     }
 }

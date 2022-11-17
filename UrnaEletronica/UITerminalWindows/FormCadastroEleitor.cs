@@ -9,7 +9,7 @@ namespace UITerminalWindows
         {
             InitializeComponent();
         }
-        private void buttonSalvar_Click_1(object sender, EventArgs e)
+        private void buttonSalvar1_Click_1(object sender, EventArgs e)
         {
             bindingSourceEleitor.EndEdit();
             EleitorBLL eleitorBll = new EleitorBll();
@@ -28,6 +28,9 @@ namespace UITerminalWindows
             bindingSourceEleitor.AddNew();
         }
 
-
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace BLL
         public DataTable BuscarPorTutulo(string _titulo)
         {
             EleitorDAL eleitorDAL= new EleitorDAL();
-            return eleitorDAL.BuscarPorTutulo(_titulo);
+            return eleitorDAL.BuscarPorTitulo(_titulo);
         }
 
         public void inserir(Eleitor _eleitor)

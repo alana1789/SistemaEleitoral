@@ -14,7 +14,7 @@ namespace UITerminalWindows
             bindingSourceCandidato.EndEdit();
             CandidatoBLL candidatoBll = new CandidatoBll();
 
-            candidatoBll.inserir(current: (Candidato)bindingSourceCandidato.Current);
+            candidatoBll.inserir((Candidato)bindingSourceCandidato.Current);
 
             MessageBox.Show("Candidato salvo");
             Close();
@@ -25,7 +25,7 @@ namespace UITerminalWindows
         {
             Candidato candidato = new Candidato();
             bindingSourceCandidato.DataSource = candidato;
-            object value = bindingSourceCandidato.AddNew();
+            bindingSourceCandidato.AddNew();
         }
 
 
@@ -34,26 +34,7 @@ namespace UITerminalWindows
             Close();
         }
         
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxTitulo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textboxNome_TextChanged(object sender, EventArgs e)
-
-        {
-
-
-        }
     }
 
 

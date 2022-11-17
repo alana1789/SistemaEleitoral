@@ -29,9 +29,16 @@ namespace UITerminalWindows
             Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bindingSourceEleicao.EndEdit();
+            EleicaoBLL eleicaoBll = new EleicaoBll();
+
+            eleicaoBll.inserir((Eleicao)bindingSourceEleicao.Current);
+
+            MessageBox.Show("Eleição salva");
+            Close();
         }
     }
 }

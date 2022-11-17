@@ -6,6 +6,7 @@ namespace BLL
 {
     public class EleicaoBLL
     {
+        private Eleicao _eleicao;
 
         public void Inserir(Eleicao _eleicao)
         {
@@ -30,7 +31,8 @@ namespace BLL
 
         public void inserir(Eleicao current)
         {
-            throw new NotImplementedException();
+            EleicaoDAL _eleicaoDAL = new EleicaoDAL();
+            _eleicaoDAL.Inseir(_eleicao);
         }
     }
 }
