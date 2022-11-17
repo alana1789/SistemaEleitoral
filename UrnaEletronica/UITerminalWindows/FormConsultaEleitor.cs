@@ -27,5 +27,11 @@ namespace UITerminalWindows
            EleitorBll eleitorBLL = new EleitorBll();
             bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTitulo("");
         }
+
+        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            EleitorBll eleitorBLL = new EleitorBll();
+            bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTitulo(textBoxBuscar.Text);
+        }
     }
 }

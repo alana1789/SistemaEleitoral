@@ -35,6 +35,9 @@
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.votouDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -101,11 +104,41 @@
             this.votouDataGridViewCheckBoxColumn.ReadOnly = true;
             this.votouDataGridViewCheckBoxColumn.Width = 125;
             // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.Location = new System.Drawing.Point(12, 58);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(772, 27);
+            this.textBoxBuscar.TabIndex = 1;
+            this.textBoxBuscar.TextChanged += new System.EventHandler(this.textBoxBuscar_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Informe o título do eleitor";
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Location = new System.Drawing.Point(801, 58);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(96, 27);
+            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            // 
             // FormConsultaEleitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 611);
+            this.Controls.Add(this.buttonBuscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxBuscar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormConsultaEleitor";
             this.Text = "FormConsultaEleitor";
@@ -113,6 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +158,8 @@
         private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tituloDataGridViewTextBoxColumn;
         private DataGridViewCheckBoxColumn votouDataGridViewCheckBoxColumn;
+        private TextBox textBoxBuscar;
+        private Label label1;
+        private Button buttonBuscar;
     }
 }
