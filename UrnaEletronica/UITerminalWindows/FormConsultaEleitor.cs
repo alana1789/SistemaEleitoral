@@ -17,18 +17,22 @@ namespace UITerminalWindows
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormConsultaEleitor_Load(object sender, EventArgs e)
         {
            EleitorBll eleitorBLL = new EleitorBll();
             bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTitulo("");
         }
 
-        private void textBoxBuscar_TextChanged(object sender, EventArgs e)
+
+        private void buttonInserir_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroEleitor frm = new FormCadastroEleitor())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
         {
             EleitorBll eleitorBLL = new EleitorBll();
             bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTitulo(textBoxBuscar.Text);
