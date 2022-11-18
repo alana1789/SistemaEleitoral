@@ -1,41 +1,38 @@
 ﻿namespace Models
 {
-	public class Candidato
-	{
-		private int numero;
-		private string nome_candidato;
-		private int id;
+    public class Candidato
+    {
+        private string nome;
+        private string numero;
+        private int id_candidato;
 
 
-		public int Id
-		{
-			get { return id; }
-			set { id = value; }
-		}
-
-		public int Numero
-		{
-			get { return numero; }
-			set { numero = value; }
-		}
-
-		public string Nome_candidato
-		{
-			get { return nome_candidato; }
-			set { nome_candidato = value; }
-		}
-
-        public object Nome { get; set; }
+        public int Id
+        {
+            get { return id_candidato; }
+            set { id_candidato = value; }
+        }
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
 
         public Candidato()
-		{
+        {
 
-		}
-		public Candidato(int _numero, string _nome_candidato, int _id)
-		{
-			Numero = _numero;
-			Nome_candidato = _nome_candidato;
-			Id = _id;
-		}
-	}
+        }
+
+        public Candidato(string _numero, string _nome, int _id)
+        {
+            Numero = _numero;
+            Nome = _nome;
+            Id = _id;
+        }
+    }
 }

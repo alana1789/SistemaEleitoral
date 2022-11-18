@@ -11,32 +11,28 @@ namespace UITerminalWindows
 
         private void buttonSalvar1_Click(object sender, EventArgs e)
         {
-            bindingSourceCandidato.EndEdit();
-            CandidatoBLL candidatoBll = new CandidatoBll();
+            {
+                bindingSourceCandidato.EndEdit();
+                CandidatoBLL candidatoBll = new CandidatoBll();
 
-            candidatoBll.inserir((Candidato)bindingSourceCandidato.Current);
+                candidatoBll.inserir((Candidato)bindingSourceCandidato.Current);
 
-            MessageBox.Show("Candidato salvo");
-            Close();
+                MessageBox.Show("Candidato salvo");
+                Close();
+            }
+
         }
 
-
-        private void CadastroCandidato_Load(object sender, EventArgs e)
+        private void FormCadastroCandidato_Load(object sender, EventArgs e)
         {
-
             Candidato candidato = new Candidato();
             bindingSourceCandidato.DataSource = candidato;
             bindingSourceCandidato.AddNew();
-
         }
-
 
         private void buttonCancelar1_Click(object sender, EventArgs e)
         {
             Close();
         }
-
     }
-
-
 }

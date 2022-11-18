@@ -125,7 +125,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelTitulo);
             this.Name = "FormCadastroCandidato";
-            this.Load += new System.EventHandler(this.CadastroCandidato_Load);
+            this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.FormCadastroCandidato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
