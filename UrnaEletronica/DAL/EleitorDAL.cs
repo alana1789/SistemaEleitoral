@@ -29,14 +29,14 @@ namespace DAL
             }
         }
 
-        public void Excluir(int _id)
+        public void Excluir(int _id_eleitor)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "DELETE FROM Eleitor WHERE Id = @Id";
-                cmd.Parameters.AddWithValue("@Id", _id);
+                cmd.CommandText = "DELETE FROM Eleitor WHERE ID_ELEITOR = @ID_ELEITOR";
+                cmd.Parameters.AddWithValue("@ID_ELEITOR", _id_eleitor);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -53,8 +53,8 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "DELETE FROM Eleitor WHERE Id = @Id";
-                cmd.Parameters.AddWithValue("@Id", _eleitor);
+                cmd.CommandText = "DELETE FROM Eleitor WHERE ID_ELEITOR = @ID_ELEITOR";
+                cmd.Parameters.AddWithValue("@ID_ELEITOR", _eleitor);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -71,11 +71,11 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "UPDATE Eleitor SET Nome = @Nome, Titulo = @Titulo, Votou = @Votou WHERE Id = @Id";
+                cmd.CommandText = "UPDATE Eleitor SET Nome = @Nome, Titulo = @Titulo, Votou = @Votou WHERE ID_ELEITOR = @ID_ELEITOR";
                 cmd.Parameters.AddWithValue("@Titulo", _eleitor.Titulo);
                 cmd.Parameters.AddWithValue("@Nome", _eleitor.Nome);
                 cmd.Parameters.AddWithValue("@Votou", _eleitor.Votou);
-                cmd.Parameters.AddWithValue("@Id", _eleitor.Id);
+                cmd.Parameters.AddWithValue("@ID_ELEITOR", _eleitor.Id);
 
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection.Open();
@@ -96,7 +96,7 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo LIKE @Titulo";
+                da.SelectCommand.CommandText = "SELECT ID_ELEITOR, Nome, Titulo, Votou FROM Eleitor WHERE Titulo LIKE @Titulo";
                 da.SelectCommand.CommandType = CommandType.Text;
                 da.SelectCommand.Parameters.AddWithValue("@Titulo","%" + _titulo + "%");
                 cn.Open();

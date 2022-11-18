@@ -5,13 +5,13 @@
 		private string nome;
 		private string titulo;
 		private bool votou;
-		private int id;
+		private int id_eleitor;
 
 
 		public int Id
 		{
-			get { return id; }
-			set { id = value; }
+			get { return id_eleitor; }
+			set { id_eleitor = value; }
 		}
 		public string Nome
 		{
