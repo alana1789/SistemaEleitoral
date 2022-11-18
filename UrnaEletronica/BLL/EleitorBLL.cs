@@ -21,16 +21,12 @@ namespace BLL
             eleitorDAL.Excluir(_id);
         }
 
-        public void Excluir(Eleitor _eleitor)
-        {
-            EleitorDAL eleitorDAL = new EleitorDAL();
-            eleitorDAL.Excluir(_eleitor);
-        }
         public void Alterar(Eleitor _eleitor)
         {
             EleitorDAL _eleitorDAL = new EleitorDAL();
             _eleitorDAL.Alterar(_eleitor);
         }
+
         public DataTable BuscarPorTutulo(string _titulo)
         {
             EleitorDAL eleitorDAL= new EleitorDAL();

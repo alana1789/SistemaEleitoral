@@ -25,7 +25,9 @@
 			set { nome_candidato = value; }
 		}
 
-		public Candidato()
+        public object Nome { get; set; }
+
+        public Candidato()
 		{
 
 		}
