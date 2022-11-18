@@ -28,14 +28,15 @@ namespace DAL
                 cmd.Connection.Close();
             }
         }
-        public void Excluir(Eleitor _eleitor)
+
+        public void Excluir(int _id)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
             SqlCommand cmd = cn.CreateCommand();
             try
             {
                 cmd.CommandText = "DELETE FROM Eleitor WHERE Id = @Id";
-                cmd.Parameters.AddWithValue("@Id", _eleitor.Id);
+                cmd.Parameters.AddWithValue("@Id", _id);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -45,6 +46,25 @@ namespace DAL
                 cn.Close();
             }
         }
+
+        public void Excluir(Eleitor _eleitor)
+        {
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            SqlCommand cmd = cn.CreateCommand();
+            try
+            {
+                cmd.CommandText = "DELETE FROM Eleitor WHERE Id = @Id";
+                cmd.Parameters.AddWithValue("@Id", _eleitor);
+                cmd.CommandType = CommandType.Text;
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public void Alterar(Eleitor _eleitor)
         {
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -66,7 +86,7 @@ namespace DAL
             }
         }
 
-        public  DataTable BuscarPorTitulo(string _titulo)
+        public  DataTable BuscarPorTutulo(string _titulo)
         {
 
 
@@ -76,7 +96,7 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo WHERE titulo LIKE @Titulo";
+                da.SelectCommand.CommandText = "SELECT Id, Nome, Titulo, Votou FROM Eleitor WHERE Titulo LIKE @Titulo";
                 da.SelectCommand.CommandType = CommandType.Text;
                 da.SelectCommand.Parameters.AddWithValue("@Titulo","%" + _titulo + "%");
                 cn.Open();

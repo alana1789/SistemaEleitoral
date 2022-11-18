@@ -14,6 +14,13 @@ namespace BLL
             EleitorDAL eleitorDAL = new EleitorDAL();
             eleitorDAL.Inseir(_eleitor);
         }
+
+        public void Excluir(int _id) 
+        {
+            EleitorDAL eleitorDAL = new EleitorDAL();
+            eleitorDAL.Excluir(_id);
+        }
+
         public void Excluir(Eleitor _eleitor)
         {
             EleitorDAL eleitorDAL = new EleitorDAL();
@@ -24,10 +31,10 @@ namespace BLL
             EleitorDAL _eleitorDAL = new EleitorDAL();
             _eleitorDAL.Alterar(_eleitor);
         }
-        public DataTable BuscarPorTitulo(string _titulo)
+        public DataTable BuscarPorTutulo(string _titulo)
         {
             EleitorDAL eleitorDAL= new EleitorDAL();
-            return eleitorDAL.BuscarPorTitulo(_titulo);
+            return eleitorDAL.BuscarPorTutulo(_titulo);
         }
 
         public void inserir(Eleitor _eleitor)

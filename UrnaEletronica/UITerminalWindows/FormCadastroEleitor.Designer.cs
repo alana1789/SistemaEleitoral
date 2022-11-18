@@ -107,7 +107,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonSalvar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonSalvar.ForeColor = System.Drawing.Color.Black;
             this.buttonSalvar.Location = new System.Drawing.Point(591, 538);
             this.buttonSalvar.Name = "buttonSalvar";
@@ -119,7 +119,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonCancelar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonCancelar.Location = new System.Drawing.Point(706, 538);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(108, 34);
