@@ -36,8 +36,8 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "DELETE FROM Eleicao WHERE ID_ELEICAO = @ID_ELEICAO";
-                cmd.Parameters.AddWithValue("@ID_ELEICAO", _id_eleicao);
+                cmd.CommandText = "DELETE FROM Eleicao WHERE ID_ELEICAO = @ID";
+                cmd.Parameters.AddWithValue("@ID", _id_eleicao);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -96,7 +96,7 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT ID_ELEICAO, Ano, Turno FROM Eleicao WHERE Ano LIKE @Ano";
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO as Id, Ano, Turno FROM Eleicao WHERE Ano LIKE @Ano";
                 da.SelectCommand.CommandType = CommandType.Text;
                 da.SelectCommand.Parameters.AddWithValue("@Ano", "%" + _ano + "%");
                 cn.Open();

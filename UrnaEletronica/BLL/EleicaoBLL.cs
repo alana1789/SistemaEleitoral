@@ -6,14 +6,6 @@ namespace BLL
 {
     public class EleicaoBLL
     {
-        private object _eleicaoDAL;
-
-        public void Inserir(Eleicao _eleicao)
-        {
-
-            EleicaoDAL eleicaoDAL = new EleicaoDAL();
-            eleicaoDAL.Inseir(_eleicao);
-        }
 
         public void Excluir(int _id_eleicao)
         {

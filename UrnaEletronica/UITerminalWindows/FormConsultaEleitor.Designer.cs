@@ -110,7 +110,7 @@
             this.textBoxBuscar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEleitor, "Titulo", true));
             this.textBoxBuscar.Location = new System.Drawing.Point(12, 58);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(772, 27);
+            this.textBoxBuscar.Size = new System.Drawing.Size(301, 27);
             this.textBoxBuscar.TabIndex = 1;
             // 
             // buttonBuscar

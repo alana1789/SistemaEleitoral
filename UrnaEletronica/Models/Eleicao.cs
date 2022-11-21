@@ -4,13 +4,13 @@
     {
         private string turno;
         private string ano;
-        private int id_eleicao;
+        private int id;
 
 
         public int Id
         {
-            get { return id_eleicao; }
-            set { id_eleicao = value; }
+            get { return id;}
+            set { id= value;}
         }
         public string Turno
         {

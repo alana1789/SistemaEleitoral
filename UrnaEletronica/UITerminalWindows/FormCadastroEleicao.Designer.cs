@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSalvar3 = new System.Windows.Forms.Button();
             this.buttonCancelar3 = new System.Windows.Forms.Button();
-            this.textBoxAno = new System.Windows.Forms.TextBox();
-            this.textBoxTurno = new System.Windows.Forms.TextBox();
+            this.textBoxAno3 = new System.Windows.Forms.TextBox();
+            this.textBoxTurno3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,27 +95,27 @@
             this.buttonCancelar3.UseVisualStyleBackColor = true;
             this.buttonCancelar3.Click += new System.EventHandler(this.buttonCancelar3_Click);
             // 
-            // textBoxAno
+            // textBoxAno3
             // 
-            this.textBoxAno.Location = new System.Drawing.Point(12, 193);
-            this.textBoxAno.Name = "textBoxAno";
-            this.textBoxAno.Size = new System.Drawing.Size(174, 27);
-            this.textBoxAno.TabIndex = 6;
+            this.textBoxAno3.Location = new System.Drawing.Point(12, 193);
+            this.textBoxAno3.Name = "textBoxAno3";
+            this.textBoxAno3.Size = new System.Drawing.Size(174, 27);
+            this.textBoxAno3.TabIndex = 6;
             // 
-            // textBoxTurno
+            // textBoxTurno3
             // 
-            this.textBoxTurno.Location = new System.Drawing.Point(12, 330);
-            this.textBoxTurno.Name = "textBoxTurno";
-            this.textBoxTurno.Size = new System.Drawing.Size(174, 27);
-            this.textBoxTurno.TabIndex = 6;
+            this.textBoxTurno3.Location = new System.Drawing.Point(12, 330);
+            this.textBoxTurno3.Name = "textBoxTurno3";
+            this.textBoxTurno3.Size = new System.Drawing.Size(174, 27);
+            this.textBoxTurno3.TabIndex = 6;
             // 
             // FormCadastroEleicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 594);
-            this.Controls.Add(this.textBoxTurno);
-            this.Controls.Add(this.textBoxAno);
+            this.Controls.Add(this.textBoxTurno3);
+            this.Controls.Add(this.textBoxAno3);
             this.Controls.Add(this.buttonCancelar3);
             this.Controls.Add(this.buttonSalvar3);
             this.Controls.Add(this.label3);
@@ -138,7 +138,7 @@
         private BindingSource bindingSourceEleicao;
         private Button buttonSalvar3;
         private Button buttonCancelar3;
-        private TextBox textBoxAno;
-        private TextBox textBoxTurno;
+        private TextBox textBoxAno3;
+        private TextBox textBoxTurno3;
     }
 }
