@@ -2,20 +2,20 @@
 {
     public class Candidato
     {
-        private string nome;
+        private string nome_candidato;
         private string numero;
-        private int id_candidato;
+        private int id;
 
 
         public int Id
         {
-            get { return id_candidato; }
-            set { id_candidato = value; }
+            get { return id; }
+            set { id = value; }
         }
-        public string Nome
+        public string Nome_candidato
         {
-            get { return nome; }
-            set { nome = value; }
+            get { return nome_candidato; }
+            set { nome_candidato = value; }
         }
         public string Numero
         {
@@ -28,10 +28,10 @@
 
         }
 
-        public Candidato(string _numero, string _nome, int _id)
+        public Candidato(string _numero, string _nome_candidato, int _id)
         {
             Numero = _numero;
-            Nome = _nome;
+            Nome_candidato = _nome_candidato;
             Id = _id;
         }
     }

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bindingSourceEleicao = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonSalvar3 = new System.Windows.Forms.Button();
+            this.buttonCancelar3 = new System.Windows.Forms.Button();
+            this.textBoxAno = new System.Windows.Forms.TextBox();
+            this.textBoxTurno = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro Eleição";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -62,27 +61,9 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ano";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceEleicao, "Ano", true));
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 182);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(361, 27);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
             // bindingSourceEleicao
             // 
             this.bindingSourceEleicao.DataSource = typeof(Models.Eleicao);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.bindingSourceEleicao, "Turno", true));
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceEleicao, "Turno", true));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 299);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 28);
-            this.comboBox1.TabIndex = 4;
             // 
             // label3
             // 
@@ -94,39 +75,55 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Turno";
             // 
-            // button1
+            // buttonSalvar3
             // 
-            this.button1.Location = new System.Drawing.Point(654, 547);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSalvar3.Location = new System.Drawing.Point(654, 547);
+            this.buttonSalvar3.Name = "buttonSalvar3";
+            this.buttonSalvar3.Size = new System.Drawing.Size(108, 35);
+            this.buttonSalvar3.TabIndex = 5;
+            this.buttonSalvar3.Text = "Salvar";
+            this.buttonSalvar3.UseVisualStyleBackColor = true;
+            this.buttonSalvar3.Click += new System.EventHandler(this.buttonSalvar3_Click);
             // 
-            // button2
+            // buttonCancelar3
             // 
-            this.button2.Location = new System.Drawing.Point(768, 547);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCancelar3.Location = new System.Drawing.Point(768, 547);
+            this.buttonCancelar3.Name = "buttonCancelar3";
+            this.buttonCancelar3.Size = new System.Drawing.Size(108, 35);
+            this.buttonCancelar3.TabIndex = 5;
+            this.buttonCancelar3.Text = "Cancelar";
+            this.buttonCancelar3.UseVisualStyleBackColor = true;
+            this.buttonCancelar3.Click += new System.EventHandler(this.buttonCancelar3_Click);
+            // 
+            // textBoxAno
+            // 
+            this.textBoxAno.Location = new System.Drawing.Point(12, 193);
+            this.textBoxAno.Name = "textBoxAno";
+            this.textBoxAno.Size = new System.Drawing.Size(174, 27);
+            this.textBoxAno.TabIndex = 6;
+            // 
+            // textBoxTurno
+            // 
+            this.textBoxTurno.Location = new System.Drawing.Point(12, 330);
+            this.textBoxTurno.Name = "textBoxTurno";
+            this.textBoxTurno.Size = new System.Drawing.Size(174, 27);
+            this.textBoxTurno.TabIndex = 6;
             // 
             // FormCadastroEleicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 594);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBoxTurno);
+            this.Controls.Add(this.textBoxAno);
+            this.Controls.Add(this.buttonCancelar3);
+            this.Controls.Add(this.buttonSalvar3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroEleicao";
             this.Text = "CadastroEleicao";
+            this.Load += new System.EventHandler(this.FormCadastroEleicao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,11 +134,11 @@
 
         private Label label1;
         private Label label2;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
         private Label label3;
         private BindingSource bindingSourceEleicao;
-        private Button button1;
-        private Button button2;
+        private Button buttonSalvar3;
+        private Button buttonCancelar3;
+        private TextBox textBoxAno;
+        private TextBox textBoxTurno;
     }
 }

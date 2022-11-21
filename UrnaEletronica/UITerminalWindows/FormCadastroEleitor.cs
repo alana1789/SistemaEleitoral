@@ -12,7 +12,7 @@ namespace UITerminalWindows
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             bindingSourceEleitor.EndEdit();
-            EleitorBLL eleitorBll = new EleitorBll();
+            EleitorBLL eleitorBll = new EleitorBLL();
 
             eleitorBll.inserir((Eleitor)bindingSourceEleitor.Current);
 

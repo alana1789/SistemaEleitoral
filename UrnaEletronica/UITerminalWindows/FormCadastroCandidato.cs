@@ -13,7 +13,7 @@ namespace UITerminalWindows
         {
             {
                 bindingSourceCandidato.EndEdit();
-                CandidatoBLL candidatoBll = new CandidatoBll();
+                CandidatoBLL candidatoBll = new CandidatoBLL();
 
                 candidatoBll.inserir((Candidato)bindingSourceCandidato.Current);
 

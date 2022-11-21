@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using BLL;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,12 @@ namespace UITerminalWindows
 
         private void FormConsultaEleitor_Load_1(object sender, EventArgs e)
         {
-            EleitorBll eleitorBLL = new EleitorBll();
+            EleitorBLL eleitorBLL = new EleitorBLL();
             bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTutulo("");
         }
         private void buttonBuscar_Click_1(object sender, EventArgs e)
         {
-            EleitorBll eleitorBLL = new EleitorBll();
+            EleitorBLL eleitorBLL = new EleitorBLL();
             bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTutulo(textBoxBuscar.Text);
         }
 
@@ -43,7 +44,7 @@ namespace UITerminalWindows
                 MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
     
-            EleitorBll eleitorBLL = new EleitorBll();
+            EleitorBLL eleitorBLL = new EleitorBLL();
 
 
             eleitorBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceEleitor.Current).Row["ID_ELEITOR"]));

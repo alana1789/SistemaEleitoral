@@ -14,13 +14,13 @@ namespace DAL
 
             try
             {
-                cmd.CommandText = "INSERT INTO Candidato(Numero, Nome) VALUES(@Numero, @Nome)";
+                cmd.CommandText = "INSERT INTO Candidato(Numero, Nome_candidato) VALUES(@Numero, @Nome_candidato)";
                 cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
-                cmd.Parameters.AddWithValue("@Nome", _candidato.Nome);
+                cmd.Parameters.AddWithValue("@Nome_candidato", _candidato.Nome_candidato);
                 cmd.CommandType = CommandType.Text;
 
                 cn.Open();
-                cmd.ExecuteScalar();
+                cmd.BeginExecuteNonQuery();
             }
             finally
             {
@@ -34,8 +34,8 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "DELETE FROM Candidato WHERE ID_CANDIDATO = @ID_CANDIDATO";
-                cmd.Parameters.AddWithValue("@ID_CANDIDATO", _id_candidato);
+                cmd.CommandText = "DELETE FROM Candidato WHERE ID_CANDIDATO = @ID";
+                cmd.Parameters.AddWithValue("@ID", _id_candidato);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -70,9 +70,9 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "UPDATE Candidato SET Nome = @Nome, Numero = @Numero WHERE ID_CANDIDATO = @ID_CANDIDATO ";
+                cmd.CommandText = "UPDATE Candidato SET Nome_candidato = @Nome_candidato, Numero = @Numero WHERE ID_CANDIDATO = @ID_CANDIDATO";
                 cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
-                cmd.Parameters.AddWithValue("@Nome", _candidato.Nome);
+                cmd.Parameters.AddWithValue("@Nome_candidato", _candidato.Nome_candidato);
                 cmd.Parameters.AddWithValue("@ID_CANDIDATO", _candidato.Id);
 
                 cmd.CommandType = CommandType.Text;
@@ -84,7 +84,7 @@ namespace DAL
             }
         }
 
-        public DataTable Busca(string _numero)
+        public DataTable BuscarPorNumero(string _numero)
         {
 
 
@@ -94,7 +94,7 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO, Nome, Numero FROM Candidato WHERE Numero LIKE @Numero";
+                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO as Id, Nome_candidato, Numero FROM Candidato WHERE Numero LIKE @Numero";
                 da.SelectCommand.CommandType = CommandType.Text;
                 da.SelectCommand.Parameters.AddWithValue("@Numero", "%" + _numero + "%");
                 cn.Open();
@@ -106,12 +106,6 @@ namespace DAL
             {
                 cn.Close();
             }
-
-        }
-
-        public DataTable Buscar(string numero)
-        {
-            throw new NotImplementedException();
         }
     }
 }
