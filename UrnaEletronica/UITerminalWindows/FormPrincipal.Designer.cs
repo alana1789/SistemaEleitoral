@@ -60,21 +60,21 @@
             // eleitorToolStripMenuItem
             // 
             this.eleitorToolStripMenuItem.Name = "eleitorToolStripMenuItem";
-            this.eleitorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eleitorToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.eleitorToolStripMenuItem.Text = "Eleitor";
             this.eleitorToolStripMenuItem.Click += new System.EventHandler(this.eleitorToolStripMenuItem_Click);
             // 
             // candidatoToolStripMenuItem
             // 
             this.candidatoToolStripMenuItem.Name = "candidatoToolStripMenuItem";
-            this.candidatoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.candidatoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.candidatoToolStripMenuItem.Text = "Candidato";
             this.candidatoToolStripMenuItem.Click += new System.EventHandler(this.candidatoToolStripMenuItem_Click);
             // 
             // eleiçãoToolStripMenuItem
             // 
             this.eleiçãoToolStripMenuItem.Name = "eleiçãoToolStripMenuItem";
-            this.eleiçãoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eleiçãoToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.eleiçãoToolStripMenuItem.Text = "Eleição";
             this.eleiçãoToolStripMenuItem.Click += new System.EventHandler(this.eleiçãoToolStripMenuItem_Click);
             // 
@@ -82,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(905, 650);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

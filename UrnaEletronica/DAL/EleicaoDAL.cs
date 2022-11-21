@@ -22,7 +22,7 @@ namespace DAL
                 cmd.CommandType = CommandType.Text;
 
                 cn.Open();
-                cmd.ExecuteScalar();
+                cmd.BeginExecuteNonQuery();
             }
             finally
             {

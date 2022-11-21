@@ -40,6 +40,8 @@
             this.buttonInserir = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -110,7 +112,7 @@
             this.textBoxBuscar.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEleitor, "Titulo", true));
             this.textBoxBuscar.Location = new System.Drawing.Point(12, 58);
             this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(301, 27);
+            this.textBoxBuscar.Size = new System.Drawing.Size(449, 27);
             this.textBoxBuscar.TabIndex = 1;
             // 
             // buttonBuscar
@@ -153,11 +155,35 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Informe o título do eleitor";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(641, 58);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(139, 24);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Buscar por título";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(483, 58);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(142, 24);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Buscar por nome";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // FormConsultaEleitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 602);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
@@ -188,5 +214,7 @@
         private Button buttonInserir;
         private Button buttonExcluir;
         private Label label1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
