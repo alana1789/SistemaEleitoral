@@ -35,7 +35,7 @@ namespace UITerminalWindows
 
         private void eleiçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (FormConsultaEleicão frm = new FormConsultaEleicão())
+            using (FormConsultaEleiçãocs frm = new FormConsultaEleiçãocs())
             {
                 frm.ShowDialog();
             }

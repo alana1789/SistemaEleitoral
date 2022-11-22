@@ -30,5 +30,23 @@ namespace BLL
             EleicaoDAL eleicaorDAL = new EleicaoDAL();
             eleicaorDAL.Inseir(_eleicao);
         }
+
+        public object BuscarPorAno(string _ano)
+        {
+            EleicaoDAL eleicaorDAL = new EleicaoDAL();
+            return eleicaorDAL.BuscarPorAno(_ano);
+        }
+
+        public object BuscarPorTurno(string _turno)
+        {
+            EleicaoDAL eleicaorDAL = new EleicaoDAL();
+            return eleicaorDAL.BuscarPorTurno(_turno);
+        }
+
+        public object BuscarPorId(int _id)
+        {
+            EleicaoDAL eleicaorDAL = new EleicaoDAL();
+            return eleicaorDAL.BuscarPorId(_id);
+        }
     }
 }

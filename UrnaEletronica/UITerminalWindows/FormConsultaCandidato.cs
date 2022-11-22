@@ -58,7 +58,6 @@ namespace UITerminalWindows
 
             candidatoBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceCandidato.Current).Row["ID_CANDIDATO"]));
 
-
             MessageBox.Show("Registro excluído com sucesso!");
         }
 

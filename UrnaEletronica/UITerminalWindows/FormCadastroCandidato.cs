@@ -36,25 +36,5 @@ namespace UITerminalWindows
             }
 
         }
-
-        private void FormCadastroCandidato_Load(object sender, EventArgs e)
-        {
-            if (id == 0)
-            {
-                Candidato candidato = new Candidato();
-                bindingSourceCandidato.DataSource = candidato;
-                bindingSourceCandidato.AddNew();
-            }
-            else
-            {
-                CandidatoBLL candidatoBLL = new CandidatoBLL();
-                bindingSourceCandidato.DataSource = candidatoBLL.BuscarPorId(id);
-            }
-        }
-
-        private void buttonCancelar1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
 }

@@ -88,8 +88,6 @@ namespace DAL
 
         public DataTable Buscar(string _ano)
         {
-
-
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -109,6 +107,72 @@ namespace DAL
                 cn.Close();
             }
 
+        }
+
+        public DataTable BuscarPorAno(string _ano)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO as Id, Ano, Turno FROM Eleicao WHERE Ano LIKE @Ano";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@Ano", "%" + _ano + "%");
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public DataTable BuscarPorTurno(string _turno)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO as Id, Ano, Turno FROM Eleicao WHERE Turno LIKE @Ano";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@Ano", "%" + _turno + "%");
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+        public object BuscarPorId(int _id_eleicao)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO, Ano FROM Eleicao WHERE ID_ELEICAO = @ID_ELEICAO";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@ID_ELEICAO", _id_eleicao);
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
     }
 }

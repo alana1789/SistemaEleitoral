@@ -100,7 +100,6 @@
             this.buttonCancelar1.TabIndex = 7;
             this.buttonCancelar1.Text = "Cancelar";
             this.buttonCancelar1.UseVisualStyleBackColor = true;
-            this.buttonCancelar1.Click += new System.EventHandler(this.buttonCancelar1_Click);
             // 
             // buttonSalvar1
             // 
@@ -126,7 +125,6 @@
             this.Controls.Add(this.labelTitulo);
             this.Name = "FormCadastroCandidato";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.FormCadastroCandidato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCandidato)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
