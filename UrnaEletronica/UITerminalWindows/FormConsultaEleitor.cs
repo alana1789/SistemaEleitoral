@@ -27,7 +27,13 @@ namespace UITerminalWindows
         private void buttonBuscar_Click_1(object sender, EventArgs e)
         {
             EleitorBLL eleitorBLL = new EleitorBLL();
-            bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTutulo(textBoxBuscar.Text);
+
+            if(radioButtonTitulo.Checked)
+                bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTutulo(textBoxBuscar.Text);
+            else if(radioButtonPorNome.Checked)
+                bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorNome(textBoxBuscar.Text);
+            else
+                bindingSourceEleitor.DataSource = eleitorBLL.BuscarPorTutulo("");
         }
 
         private void buttonInserir_Click_1(object sender, EventArgs e)
