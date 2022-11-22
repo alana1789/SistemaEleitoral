@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.CheckBox checkBoxVotou;
             this.bindingSourceEleitor = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,21 +37,9 @@
             this.textBoxTitulo = new System.Windows.Forms.TextBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            checkBoxVotou = new System.Windows.Forms.CheckBox();
+            this.checkBoxVotou = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleitor)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkBoxVotou
-            // 
-            checkBoxVotou.AutoSize = true;
-            checkBoxVotou.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceEleitor, "Votou", true));
-            checkBoxVotou.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            checkBoxVotou.Location = new System.Drawing.Point(665, 196);
-            checkBoxVotou.Name = "checkBoxVotou";
-            checkBoxVotou.Size = new System.Drawing.Size(113, 29);
-            checkBoxVotou.TabIndex = 3;
-            checkBoxVotou.Text = "Já votou?";
-            checkBoxVotou.UseVisualStyleBackColor = true;
             // 
             // bindingSourceEleitor
             // 
@@ -128,15 +115,26 @@
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
+            // checkBoxVotou
+            // 
+            this.checkBoxVotou.AutoSize = true;
+            this.checkBoxVotou.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceEleitor, "Votou", true));
+            this.checkBoxVotou.Location = new System.Drawing.Point(642, 201);
+            this.checkBoxVotou.Name = "checkBoxVotou";
+            this.checkBoxVotou.Size = new System.Drawing.Size(86, 24);
+            this.checkBoxVotou.TabIndex = 5;
+            this.checkBoxVotou.Text = "Já votou";
+            this.checkBoxVotou.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroEleitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(844, 602);
+            this.Controls.Add(this.checkBoxVotou);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(checkBoxVotou);
             this.Controls.Add(this.textBoxTitulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textboxNome);
@@ -162,5 +160,6 @@
         private Button buttonSalvar;
         private Button buttonCancelar;
         private BindingSource bindingSourceEleitor;
+        private CheckBox checkBoxVotou;
     }
 }

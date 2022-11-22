@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace UITerminalWindows
 {
+
+
     public partial class FormConsultaEleitor : Form
-    { 
+    {
         public FormConsultaEleitor()
         {
             InitializeComponent();
@@ -59,5 +61,14 @@ namespace UITerminalWindows
             MessageBox.Show("Registro excluído com sucesso!");
         }
 
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroEleitor frm = new FormCadastroEleitor(Convert.ToInt32(((DataRowView)bindingSourceEleitor.Current).Row["ID_ELEITOR"])))
+            {
+                frm.ShowDialog();
+            }
+            buttonBuscar_Click_1(sender, e);
+        }
     }
 }
+

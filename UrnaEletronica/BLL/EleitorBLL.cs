@@ -1,11 +1,17 @@
 ﻿using Models;
 using DAL;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace BLL
 {
     public class EleitorBLL
     {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Titulo { get; set; }
+        public object Votou { get; set; }
+
         public void Inserir(Eleitor _eleitor)
         {
             if (_eleitor.Nome.Length <= 2)
@@ -44,5 +50,12 @@ namespace BLL
             EleitorDAL eleitorDAL = new EleitorDAL();
              return eleitorDAL.BuscarPorNome (_nome);
         }
+
+        public object BuscarPorId(int _id)
+        {
+            EleitorDAL eleitorDAL = new EleitorDAL();
+            return eleitorDAL.BuscarPorId(_id);
+        }
+
     }
 }
