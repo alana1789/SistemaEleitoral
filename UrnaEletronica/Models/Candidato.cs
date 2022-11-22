@@ -23,6 +23,8 @@
             set { numero = value; }
         }
 
+        public string Nome { get; set; }
+
         public Candidato()
         {
 

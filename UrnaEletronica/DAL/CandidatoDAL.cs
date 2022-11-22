@@ -107,6 +107,50 @@ namespace DAL
                 cn.Close();
             }
         }
+        public DataTable BuscarPorNome(string _nome)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO, Nome_candidato, Numero FROM Candidato WHERE Nome_candidato LIKE @Numero";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@Numero", "%" + _nome + "%");
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+                
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public DataTable BuscarPorId(int _id_candidato)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
+            try
+            {
+                da.SelectCommand = cn.CreateCommand();
+                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO, Numero FROM Candidato WHERE ID_CANDIDATO = @ID_CANDIDATO";
+                da.SelectCommand.CommandType = CommandType.Text;
+                da.SelectCommand.Parameters.AddWithValue("@ID_CANDIDATO", _id_candidato);
+                cn.Open();
+                da.Fill(dt);
+                return dt;
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
+
 

@@ -29,5 +29,17 @@ namespace BLL
             CandidatoDAL _candidatoDAL = new CandidatoDAL();
             _candidatoDAL.Inseir(_candidato);
         }
+
+        public object BuscarPorNome(string _nome)
+        {
+            CandidatoDAL candidatoDAL = new CandidatoDAL();
+            return candidatoDAL.BuscarPorNome(_nome);
+        }
+        public object BuscarPorId(int _id)
+        {
+            CandidatoDAL candidatoDAL = new CandidatoDAL();
+            return candidatoDAL.BuscarPorId(_id);
+        }
+        
     }
 }
