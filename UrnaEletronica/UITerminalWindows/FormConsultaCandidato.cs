@@ -51,7 +51,7 @@ namespace UITerminalWindows
 
         private void buttonAlterar_Click(object sender, EventArgs e)
         {
-            using (FormCadastroCandidato frm = new FormCadastroCandidato(Convert.ToInt32(((DataRowView)bindingSourceCandidato.Current).Row["ID_CANDIDATO"])))
+            using (FormCadastroCandidato frm = new FormCadastroCandidato(Convert.ToInt32(((DataRowView)bindingSourceCandidato.Current).Row["ID"])))
             {
                 frm.ShowDialog();
             }

@@ -73,7 +73,7 @@ namespace DAL
                 cmd.CommandText = "UPDATE Candidato SET Nome_candidato = @Nome_candidato, Numero = @Numero WHERE ID_CANDIDATO = @ID_CANDIDATO";
                 cmd.Parameters.AddWithValue("@Numero", _candidato.Numero);
                 cmd.Parameters.AddWithValue("@Nome_candidato", _candidato.Nome_candidato);
-                cmd.Parameters.AddWithValue("@ID_CANDIDATO", _candidato.Id);
+                cmd.Parameters.AddWithValue("@ID", _candidato.Id);
 
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection.Open();

@@ -139,9 +139,9 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT ID_ELEICAO as Id, Ano, Turno FROM Eleicao WHERE Turno LIKE @Ano";
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO as Id, Ano, Turno FROM Eleicao WHERE Turno @Ano";
                 da.SelectCommand.CommandType = CommandType.Text;
-                da.SelectCommand.Parameters.AddWithValue("@Ano", "%" + _turno + "%");
+                da.SelectCommand.Parameters.AddWithValue("@Ano", _turno);
                 cn.Open();
                 da.Fill(dt);
                 return dt;
