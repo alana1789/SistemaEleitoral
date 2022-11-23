@@ -1,14 +1,5 @@
 ﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace UITerminalWindows
 {
@@ -49,12 +40,12 @@ namespace UITerminalWindows
 
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Você deseja mesmo excluir este candidato?", "Atnção",
+            if (MessageBox.Show("Você deseja mesmo excluir este candidato?", "Atenção",
                 MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
 
             CandidatoBLL candidatoBLL = new CandidatoBLL();
-            candidatoBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceCandidato.Current).Row["ID_CANDIDATO"]));
+            candidatoBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceCandidato.Current).Row["Id"]));
             MessageBox.Show("Registro excluído com sucesso!");
         }
 

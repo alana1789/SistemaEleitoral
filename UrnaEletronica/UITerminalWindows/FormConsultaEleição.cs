@@ -56,7 +56,10 @@ namespace UITerminalWindows
             EleicaoBLL eleicaoBLL = new EleicaoBLL();
 
 
-            eleicaoBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceEleicao.Current).Row["ID_ELEICAO"]));
+            EleitorBLL eleitorBLL = new EleitorBLL();
+
+
+            eleicaoBLL.Excluir(Convert.ToInt32(((DataRowView)bindingSourceEleicao.Current).Row["ID"]));
 
 
             MessageBox.Show("Registro excluído com sucesso!");

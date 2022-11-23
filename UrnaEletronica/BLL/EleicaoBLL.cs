@@ -28,33 +28,28 @@ namespace BLL
             return eleicaoDAL.Buscar(_ano);
         }
 
-        public void inserir(Eleicao _eleicao)
+        public void Inserir(Eleicao _eleicao)
         {
-            EleicaoDAL eleicaorDAL = new EleicaoDAL();
-            eleicaorDAL.Inseir(_eleicao);
+            EleicaoDAL eleicaoDAL = new EleicaoDAL();
+            eleicaoDAL.Inseir(_eleicao);
         }
 
         public DataTable BuscarPorAno(string _ano)
         {
-            EleicaoDAL eleicaorDAL = new EleicaoDAL();
-            return eleicaorDAL.BuscarPorAno(_ano);
+            EleicaoDAL eleicaoDAL = new EleicaoDAL();
+            return eleicaoDAL.BuscarPorAno(_ano);
         }
 
         public DataTable BuscarPorTurno(string _turno)
         {
-            EleicaoDAL eleicaorDAL = new EleicaoDAL();
-            return eleicaorDAL.BuscarPorTurno(_turno);
+            EleicaoDAL eleicaoDAL = new EleicaoDAL();
+            return eleicaoDAL.BuscarPorTurno(_turno);
         }
 
         public DataTable BuscarPorId(int _id)
         {
-            EleicaoDAL eleicaorDAL = new EleicaoDAL();
-            return eleicaorDAL.BuscarPorId(_id);
-        }
-
-        public void Inserir(Eleicao current)
-        {
-            throw new NotImplementedException();
+            EleicaoDAL eleicaoDAL = new EleicaoDAL();
+            return eleicaoDAL.BuscarPorId(_id);
         }
     }
 }

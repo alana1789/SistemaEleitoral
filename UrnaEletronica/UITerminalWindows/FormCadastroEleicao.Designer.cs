@@ -65,6 +65,7 @@
             // 
             // textBoxTurno2
             // 
+            this.textBoxTurno2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEleicao, "Turno", true));
             this.textBoxTurno2.Location = new System.Drawing.Point(341, 137);
             this.textBoxTurno2.Name = "textBoxTurno2";
             this.textBoxTurno2.Size = new System.Drawing.Size(271, 27);
@@ -82,6 +83,7 @@
             // 
             // textboxAno2
             // 
+            this.textboxAno2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceEleicao, "Ano", true));
             this.textboxAno2.Location = new System.Drawing.Point(19, 137);
             this.textboxAno2.Name = "textboxAno2";
             this.textboxAno2.Size = new System.Drawing.Size(290, 27);
@@ -107,6 +109,10 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "CADASTRO DE ELEIÇÃO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // bindingSourceEleicao
+            // 
+            this.bindingSourceEleicao.DataSource = typeof(Models.Eleicao);
             // 
             // FormCadastroEleicao
             // 
