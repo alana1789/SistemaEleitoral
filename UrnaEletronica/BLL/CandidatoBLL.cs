@@ -6,6 +6,11 @@ namespace BLL
 {
     public class CandidatoBLL
     {
+
+        public int Id { get; set; }
+        public string Nome_candidato { get; set; }
+        public string Numero { get; set; }
+
         public void Excluir(int _id_candidato)
         {
             CandidatoDAL candidatoDAL = new CandidatoDAL();
@@ -30,10 +35,10 @@ namespace BLL
             _candidatoDAL.Inseir(_candidato);
         }
 
-        public object BuscarPorNome(string _nome)
+        public object BuscarPorNome(string _nome_candidato)
         {
             CandidatoDAL candidatoDAL = new CandidatoDAL();
-            return candidatoDAL.BuscarPorNome(_nome);
+            return candidatoDAL.BuscarPorNome(_nome_candidato);
         }
         public object BuscarPorId(int _id)
         {

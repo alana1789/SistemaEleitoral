@@ -27,7 +27,7 @@ namespace UITerminalWindows
                 {
                     Candidato candidato = new Candidato();
                     candidato.Id = id;
-                    candidato.Nome = textboxNome1.Text;
+                    candidato.Nome_candidato = textboxNome1.Text;
                     candidato.Numero = textBoxNumero1.Text;
                     candidatoBLL.Alterar(candidato);
                     MessageBox.Show("Candidato alterado");
@@ -35,6 +35,26 @@ namespace UITerminalWindows
                 Close();
             }
 
+        }
+
+        private void FormCadastroCandidato_Load(object sender, EventArgs e)
+        {
+            if (id == 0)
+            {
+                Candidato candidato = new Candidato();
+                bindingSourceCandidato.DataSource = candidato;
+                bindingSourceCandidato.AddNew();
+            }
+            else
+            {
+                CandidatoBLL candidatoBLL = new CandidatoBLL();
+                bindingSourceCandidato.DataSource = candidatoBLL.BuscarPorId(id);
+            }
+        }
+
+        private void buttonCancelar1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

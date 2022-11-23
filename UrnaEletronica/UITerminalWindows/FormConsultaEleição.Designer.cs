@@ -1,6 +1,6 @@
 ﻿namespace UITerminalWindows
 {
-    partial class FormConsultaEleiçãocs
+    partial class FormConsultaEleição
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +112,7 @@
             this.buttonAlterar.TabIndex = 27;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // radioButton1
             // 
@@ -164,6 +165,7 @@
             this.buttonExcluir.TabIndex = 21;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonInserir
             // 
@@ -173,6 +175,7 @@
             this.buttonInserir.TabIndex = 22;
             this.buttonInserir.Text = "Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
+            this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
             // 
             // button1
             // 
@@ -182,6 +185,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxBuscar
             // 
@@ -210,10 +214,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(885, 410);
             this.dataGridView1.TabIndex = 18;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Models.Eleicao);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -241,7 +241,11 @@
             this.anoDataGridViewTextBoxColumn.ReadOnly = true;
             this.anoDataGridViewTextBoxColumn.Width = 125;
             // 
-            // FormConsultaEleiçãocs
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Models.Eleicao);
+            // 
+            // FormConsultaEleição
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,8 +265,9 @@
             this.Controls.Add(this.radioButtonTitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBuscar);
-            this.Name = "FormConsultaEleiçãocs";
+            this.Name = "FormConsultaEleição";
             this.Text = "FormConsultaEleiçãocs";
+            this.Load += new System.EventHandler(this.FormConsultaEleição_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

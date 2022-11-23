@@ -107,7 +107,7 @@ namespace DAL
                 cn.Close();
             }
         }
-        public DataTable BuscarPorNome(string _nome)
+        public DataTable BuscarPorNome(string _nome_candidato)
         {
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
@@ -115,9 +115,9 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO, Nome_candidato, Numero FROM Candidato WHERE Nome_candidato LIKE @Numero";
+                da.SelectCommand.CommandText = "SELECT ID_CANDIDATO, Nome_candidato, Numero FROM Candidato WHERE Nome LIKE @Numero";
                 da.SelectCommand.CommandType = CommandType.Text;
-                da.SelectCommand.Parameters.AddWithValue("@Numero", "%" + _nome + "%");
+                da.SelectCommand.Parameters.AddWithValue("@Numero", "%" + _nome_candidato + "%");
                 cn.Open();
                 da.Fill(dt);
                 return dt;

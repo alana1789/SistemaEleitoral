@@ -6,6 +6,9 @@ namespace BLL
 {
     public class EleicaoBLL
     {
+        public int Id { get; set; }
+        public string Ano { get; set; }
+        public string Turno { get; set; }
 
         public void Excluir(int _id_eleicao)
         {
@@ -48,5 +51,6 @@ namespace BLL
             EleicaoDAL eleicaorDAL = new EleicaoDAL();
             return eleicaorDAL.BuscarPorId(_id);
         }
+
     }
 }

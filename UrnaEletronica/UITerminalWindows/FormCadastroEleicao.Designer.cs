@@ -1,6 +1,6 @@
 ﻿namespace UITerminalWindows
 {
-    partial class FormCadastroEleição
+    partial class FormCadastroEleicao
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@
             this.buttonCancelar2.TabIndex = 11;
             this.buttonCancelar2.Text = "Cancelar";
             this.buttonCancelar2.UseVisualStyleBackColor = false;
+            this.buttonCancelar2.Click += new System.EventHandler(this.buttonCancelar2_Click);
             // 
             // buttonSalvar2
             // 
@@ -57,6 +58,7 @@
             this.buttonSalvar2.TabIndex = 12;
             this.buttonSalvar2.Text = "Salvar";
             this.buttonSalvar2.UseVisualStyleBackColor = false;
+            this.buttonSalvar2.Click += new System.EventHandler(this.buttonSalvar2_Click);
             // 
             // textBoxTurno2
             // 

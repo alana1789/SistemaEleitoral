@@ -36,7 +36,6 @@
             this.textBoxBuscar2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome_candidato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceCandidato = new System.Windows.Forms.BindingSource(this.components);
             this.radioButtonTodos = new System.Windows.Forms.RadioButton();
@@ -103,7 +102,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.Nome_candidato,
             this.numeroDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSourceCandidato;
             this.dataGridView1.Location = new System.Drawing.Point(37, 115);
@@ -122,15 +120,6 @@
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // Nome_candidato
-            // 
-            this.Nome_candidato.DataPropertyName = "Nome_candidato";
-            this.Nome_candidato.HeaderText = "Nome_candidato";
-            this.Nome_candidato.MinimumWidth = 6;
-            this.Nome_candidato.Name = "Nome_candidato";
-            this.Nome_candidato.ReadOnly = true;
-            this.Nome_candidato.Width = 125;
             // 
             // numeroDataGridViewTextBoxColumn
             // 
@@ -224,7 +213,7 @@
         private BindingSource bindingSourceCandidato;
         private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn Nome_candidato;
+       // private DataGridViewTextBoxColumn Nome_candidato;
         private DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
         private RadioButton radioButtonTodos;
         private RadioButton radioButtonNumero;

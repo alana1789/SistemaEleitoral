@@ -161,7 +161,7 @@ namespace DAL
             try
             {
                 da.SelectCommand = cn.CreateCommand();
-                da.SelectCommand.CommandText = "SELECT ID_ELEICAO, Ano FROM Eleicao WHERE ID_ELEICAO = @ID_ELEICAO";
+                da.SelectCommand.CommandText = "SELECT ID_ELEICAO, Ano, Turno FROM Eleicao WHERE ID_ELEICAO = @ID_ELEICAO";
                 da.SelectCommand.CommandType = CommandType.Text;
                 da.SelectCommand.Parameters.AddWithValue("@ID_ELEICAO", _id_eleicao);
                 cn.Open();
