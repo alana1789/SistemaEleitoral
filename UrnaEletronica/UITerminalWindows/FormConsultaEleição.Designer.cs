@@ -36,8 +36,8 @@
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonAno = new System.Windows.Forms.RadioButton();
+            this.radioButtonTurno = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonInserir = new System.Windows.Forms.Button();
@@ -47,9 +47,9 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEleicao = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButtonTodos
@@ -125,27 +125,27 @@
             this.radioButton1.Text = "Todos";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonAno
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(626, 91);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 24);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "por ano";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonAno.AutoSize = true;
+            this.radioButtonAno.Location = new System.Drawing.Point(626, 91);
+            this.radioButtonAno.Name = "radioButtonAno";
+            this.radioButtonAno.Size = new System.Drawing.Size(82, 24);
+            this.radioButtonAno.TabIndex = 24;
+            this.radioButtonAno.TabStop = true;
+            this.radioButtonAno.Text = "por ano";
+            this.radioButtonAno.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonTurno
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(727, 91);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(96, 24);
-            this.radioButton3.TabIndex = 25;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = " por turno";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonTurno.AutoSize = true;
+            this.radioButtonTurno.Location = new System.Drawing.Point(727, 91);
+            this.radioButtonTurno.Name = "radioButtonTurno";
+            this.radioButtonTurno.Size = new System.Drawing.Size(96, 24);
+            this.radioButtonTurno.TabIndex = 25;
+            this.radioButtonTurno.TabStop = true;
+            this.radioButtonTurno.Text = " por turno";
+            this.radioButtonTurno.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -205,7 +205,7 @@
             this.idDataGridViewTextBoxColumn,
             this.turnoDataGridViewTextBoxColumn,
             this.anoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.DataSource = this.bindingSourceEleicao;
             this.dataGridView1.Location = new System.Drawing.Point(40, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -241,9 +241,9 @@
             this.anoDataGridViewTextBoxColumn.ReadOnly = true;
             this.anoDataGridViewTextBoxColumn.Width = 125;
             // 
-            // bindingSource1
+            // bindingSourceEleicao
             // 
-            this.bindingSource1.DataSource = typeof(Models.Eleicao);
+            this.bindingSourceEleicao.DataSource = typeof(Models.Eleicao);
             // 
             // FormConsultaEleição
             // 
@@ -252,8 +252,8 @@
             this.ClientSize = new System.Drawing.Size(964, 682);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButtonAno);
+            this.Controls.Add(this.radioButtonTurno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonInserir);
@@ -269,7 +269,7 @@
             this.Text = "FormConsultaEleiçãocs";
             this.Load += new System.EventHandler(this.FormConsultaEleição_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,8 +284,8 @@
         private Button buttonBuscar;
         private Button buttonAlterar;
         private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
+        private RadioButton radioButtonAno;
+        private RadioButton radioButtonTurno;
         private Label label2;
         private Button buttonExcluir;
         private Button buttonInserir;
@@ -295,6 +295,6 @@
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn turnoDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn anoDataGridViewTextBoxColumn;
-        private BindingSource bindingSource1;
+        private BindingSource bindingSourceEleicao;
     }
 }

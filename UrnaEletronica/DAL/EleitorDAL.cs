@@ -35,7 +35,7 @@ namespace DAL
             SqlCommand cmd = cn.CreateCommand();
             try
             {
-                cmd.CommandText = "DELETE FROM Eleitor WHERE ID_ELEITOR = @ID_ELEITOR";
+                cmd.CommandText = "DELETE FROM Eleitor WHERE ID_ELEITOR = @ID";
                 cmd.Parameters.AddWithValue("@ID_ELEITOR", _id_eleitor);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();

@@ -4,13 +4,13 @@
     {
         private string nome_candidato;
         private string numero;
-        private int id;
+        private int id_candidato;
 
 
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+            get { return id_candidato; }
+            set { id_candidato = value; }
         }
         public string Nome_candidato
         {

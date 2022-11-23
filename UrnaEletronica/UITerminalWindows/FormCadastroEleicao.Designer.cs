@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonCancelar2 = new System.Windows.Forms.Button();
             this.buttonSalvar2 = new System.Windows.Forms.Button();
             this.textBoxTurno2 = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.textboxAno2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSourceEleicao = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCancelar2
@@ -105,7 +108,7 @@
             this.label1.Text = "CADASTRO DE ELEIÇÃO";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // FormCadastroEleição
+            // FormCadastroEleicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,9 +120,10 @@
             this.Controls.Add(this.textboxAno2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FormCadastroEleição";
+            this.Name = "FormCadastroEleicao";
             this.Text = "FormCadastroEleição";
             this.Load += new System.EventHandler(this.FormCadastroEleição_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEleicao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +138,6 @@
         private TextBox textboxAno2;
         private Label label2;
         private Label label1;
+        private BindingSource bindingSourceEleicao;
     }
 }

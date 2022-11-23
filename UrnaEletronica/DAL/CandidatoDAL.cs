@@ -35,7 +35,7 @@ namespace DAL
             try
             {
                 cmd.CommandText = "DELETE FROM Candidato WHERE ID_CANDIDATO = @ID";
-                cmd.Parameters.AddWithValue("@ID", _id_candidato);
+                cmd.Parameters.AddWithValue("@ID_CANDIDATO", _id_candidato);
                 cmd.CommandType = CommandType.Text;
                 cn.Open();
                 cmd.ExecuteNonQuery();

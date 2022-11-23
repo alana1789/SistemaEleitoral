@@ -153,7 +153,7 @@ namespace DAL
             }
 
         }
-        public object BuscarPorId(int _id_eleicao)
+        public DataTable BuscarPorId(int _id_eleicao)
         {
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();

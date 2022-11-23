@@ -14,6 +14,8 @@ namespace UITerminalWindows
 {
     public partial class FormConsultaEleição : Form
     {
+       
+
         public FormConsultaEleição()
         {
             InitializeComponent();
@@ -29,9 +31,9 @@ namespace UITerminalWindows
         {
             EleicaoBLL eleicaoBLL = new EleicaoBLL();
 
-            if (radioButtonTitulo.Checked)
+            if (radioButtonAno.Checked)
                 bindingSourceEleicao.DataSource = eleicaoBLL.BuscarPorAno(textBoxBuscar.Text);
-            else if (radioButtonPorNome.Checked)
+            else if (radioButtonAno.Checked)
                 bindingSourceEleicao.DataSource = eleicaoBLL.BuscarPorTurno(textBoxBuscar.Text);
             else
                 bindingSourceEleicao.DataSource = eleicaoBLL.BuscarPorAno("");

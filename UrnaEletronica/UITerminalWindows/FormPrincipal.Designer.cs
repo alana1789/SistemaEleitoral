@@ -88,7 +88,6 @@
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
             this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -106,7 +105,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
-            this.Text = "FormPrincipal";
+            this.Text = "Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

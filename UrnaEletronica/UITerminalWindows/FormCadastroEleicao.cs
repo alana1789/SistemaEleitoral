@@ -15,7 +15,6 @@ namespace UITerminalWindows
     public partial class FormCadastroEleicao : Form
     {
         private int id;
-        private object bindingSourceEleicao;
 
         public static DataRowView Current { get; internal set; }
 
@@ -45,7 +44,7 @@ namespace UITerminalWindows
             EleicaoBLL eleicaoBLL = new EleicaoBLL();
             if (id == 0)
             {
-                object value = bindingSourceEleicao.EndEdit();
+                bindingSourceEleicao.EndEdit();
                 eleicaoBLL.Inserir((Eleicao)bindingSourceEleicao.Current);
                 MessageBox.Show("Eleicao Cadastrada!");
             }

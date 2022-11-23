@@ -41,11 +41,6 @@ namespace UITerminalWindows
             }
         }
 
-        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using(FormSobre frm = new FormSobre())
